@@ -1,13 +1,10 @@
 <?php
-    include("conecta.php");
-    // Para pegar o texto dos inputs:
-    $matricula  = $_GET["M"];
-    
+include("conecta.php");
+$nome = $_GET["n"];
 
-    $comando = $pdo->prepare("DELETE FROM usuario WHERE email=$email");
 
-    $resultado = $comando->execute();
+$comando = $pdo->prepare("DELETE FROM agenda WHERE nome=$nome");
+$resultado = $comando->execute();
 
-    // Para voltar no formulário:
-    header("Location: cadastro.html");
+header("Location: index.html");
 ?>
