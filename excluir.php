@@ -6,5 +6,5 @@ $nome = $_GET["n"];
 $comando = $pdo->prepare("DELETE FROM agenda WHERE nome=$nome");
 $resultado = $comando->execute();
 
-header("Location: index.html");
+header("Location: indexdois.php");
 ?>
